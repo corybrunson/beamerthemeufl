@@ -1,0 +1,27 @@
+\mode<presentation>
+
+% Helvetica package (equivalent to Arial)
+%\usepackage{helvet}
+% Cantarell package (free alternative to Gentona)
+% Set default sans-serif to Cantarell -+- make this an option? -+-
+%\usepackage{cantarell}
+\usepackage[defaultsans]{cantarell}
+% Alfa Slab One is desirable as a free alternative to Quadon Heavy.
+% Here's how that might be done:
+% https://tex.stackexchange.com/a/88424
+
+% Revert default sans-serif to Helvetica -+- make this an option? -+-
+%\renewcommand{\sfdefault}{phv}
+% Default to sans-serif font
+\renewcommand{\familydefault}{\sfdefault}
+
+% Shortcuts to Cantarell extra-bold
+\newcommand\cantarelleb{\fontfamily{cantarell-TLF}\fontseries{eb}\selectfont}
+\newcommand\primarytype[1]{{\fontfamily{cantarell-TLF}\fontseries{eb}\selectfont #1}}
+
+% Font assignments
+
+\setbeamerfont*{titlelike}{size=\large}
+\setbeamerfont*{block title}{family=\fontfamily{cantarell-TLF},series=\fontseries{eb}}
+
+\mode<all>

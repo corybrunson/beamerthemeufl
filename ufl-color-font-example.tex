@@ -1,0 +1,206 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\useinnertheme{default}
+\useoutertheme[footline=authorinstitute,subsection=true]{miniframes}
+%\useoutertheme{sidebar}
+\usecolortheme{ufl}
+\usefonttheme{ufl}
+
+\setbeamercolor*{date}{fg=ufl blue}
+
+\title[Beamer colors and fonts for UF]{Beamer color and font themes\\ for the University of Florida}
+\subtitle{part of a suite of themes}
+\author[Cory Brunson]{Jason Cory Brunson, PhD}
+\institute[University of Florida]{Laboratory for Systems Medicine\\ Division of Pulmonary, Critical Care, and Sleep Medicine\\ University of Florida}
+\date{\today}
+
+\newtheorem{remark}{Remark}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}{Table of contents}
+\tableofcontents
+\end{frame}
+
+
+\section{Theme defaults}
+
+
+\begin{frame}[fragile]{Default font family}
+
+%The default Helvetica font family is provided by the {\ttfamily helvet} package.
+%It is equivalent to Arial, which is used in the PowerPoint templates (see the \hyperlink{slide:acknowledgments}{Acknowledgments slide}).
+
+The default font family is set to sans-serif, and the sans-serif default Cantarell is provided by \href{https://www.ctan.org/tex-archive/fonts/cantarell}{the {\ttfamily cantarell} package}. This is a free alternative to \href{http://identity.ufl.edu/typography/}{Gentona}, one of two official typefaces of the UF brand.
+
+Block titles are rendered in {\cantarelleb Cantarell extra bold}, and two shortcuts are available to render any text in this style:
+\begin{itemize}
+\item \verb|\cantarelleb| (with no argument)
+\item \verb|\primarytype{}| (with a text argument)
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Palette colors}
+
+The palette colors used by outer themes interpolate between UF blue (main) or UF orange (sidebar) and white:
+
+\vfill
+
+\begin{columns}
+\begin{column}{.5\textwidth}
+
+\centering
+\verb|palette|
+\vspace{1ex}
+
+\begin{beamercolorbox}[sep=4pt,center]{palette primary}
+\usebeamerfont{palette primary}primary
+\end{beamercolorbox}
+
+\begin{beamercolorbox}[sep=4pt,center]{palette secondary}
+\usebeamerfont{palette secondary}secondary
+\end{beamercolorbox}
+
+\begin{beamercolorbox}[sep=4pt,center]{palette tertiary}
+\usebeamerfont{palette tertiary}tertiary
+\end{beamercolorbox}
+
+\begin{beamercolorbox}[sep=4pt,center]{palette quaternary}
+\usebeamerfont{palette quaternary}quaternary
+\end{beamercolorbox}
+
+\end{column}
+\begin{column}{.5\textwidth}
+
+\centering
+\verb|palette sidebar|
+\vspace{1ex}
+
+\begin{beamercolorbox}[sep=4pt,center]{palette sidebar primary}
+\usebeamerfont{palette sidebar primary}primary
+\end{beamercolorbox}
+
+\begin{beamercolorbox}[sep=4pt,center]{palette sidebar secondary}
+\usebeamerfont{palette sidebar secondary}secondary
+\end{beamercolorbox}
+
+\begin{beamercolorbox}[sep=4pt,center]{palette sidebar tertiary}
+\usebeamerfont{palette sidebar tertiary}tertiary
+\end{beamercolorbox}
+
+\begin{beamercolorbox}[sep=4pt,center]{palette sidebar quaternary}
+\usebeamerfont{palette sidebar quaternary}quaternary
+\end{beamercolorbox}
+
+\end{column}
+\end{columns}
+
+\vspace{2ex}
+For example, \verb|palette secondary| is defined using
+\begin{verbatim}
+bg=ufl blue!80!white,fg=white
+\end{verbatim}
+
+\end{frame}
+
+
+\begin{frame}{Frame element colors}
+
+The symbol colors for itemized and enumerated lists derive from the UF Bright Color Palette and progress
+\begin{itemize}
+\item from green,
+\begin{itemize}
+\item through violet,
+\begin{itemize}
+\item to red.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\alert{Alerted text is rendered in yellow.}
+
+\vfill\begin{remark}
+Block and caption titles are rendered in UF orange and Cantarell extra bold.
+\end{remark}
+
+\vfill
+Hyperlinks and buttons are rendered in muted UF blue.
+See \hyperlink{sec:customization}{Customization} and \hyperlink{slide:acknowledgments}{Acknowledgments} for examples.
+
+\end{frame}
+
+
+\section{Customization}
+\label{sec:customization}
+
+
+\begin{frame}[fragile]{Manually assigning colors}
+
+To again showcase colors from the Bright Color Palette, type
+\begin{verbatim}
+{\color{ufl violet} violet}
+\end{verbatim}
+(with brackets) to render {\color{ufl violet} violet}, or set
+\begin{verbatim}
+\color{ufl green}
+\end{verbatim}
+\color{ufl green}
+(without brackets) to color all text in a slide green.
+
+\color{black}\vfill
+Names for the Neutral and Preeminence Color Palettes were obtained with help from the website \href{https://www.color-blindness.com/color-name-hue/}{Color Name \& Hue}.
+
+\center\href{http://identity.ufl.edu/color/}{\beamerbutton{Visit the Brand website}}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Changing the theme}
+
+You can change the default colors by using setbeamercolor in the preamble, as i did:
+\begin{verbatim}
+\setbeamercolor*{date}{fg=ufl blue}
+\end{verbatim}
+\ldots or by editing the color theme file {\tt beamercolorthemeufl.sty}.
+Please \hyperlink{http://identity.ufl.edu/support/contact/}{contact the Brands office} about using the derivative theme, e.g.\ one with the colors themselves altered.
+
+\end{frame}
+
+
+\section{Thanks}
+
+
+\begin{frame}{Acknowledgments}
+\label{slide:acknowledgments}
+
+I relied heavily on the following resources:
+\begin{itemize}
+\item the \href{http://texdoc.net/texmf-dist/doc/latex/beamer/doc/beameruserguide.pdf}{Beamer class users guide}
+\item Thierry Masson's Beamer \href{http://www.cpt.univ-mrs.fr/~masson/latex/Beamer-appearance-cheat-sheet.pdf}{cheat sheet}
+\item University of Florida Brand (\url{http://identity.ufl.edu/})
+\begin{itemize}
+\item the \href{http://identity.ufl.edu/color/}{color palettes} defined in {\tt beamercolorthemeufl.sty}
+\item the \href{http://identity.ufl.edu/typography/}{typefaces} approximated in {\tt beamerfontthemeufl.sty}
+\item presentation tools at the \href{http://identity.ufl.edu/our-brand/}{Branding Guidelines}
+\end{itemize}
+\end{itemize}
+
+\vfill
+If you have suggestions for improvement, please let me know!
+
+\center\href{https://github.com/corybrunson/beamerthemeufl/issues}{\beamerbutton{Open an issue on GitHub}}
+
+\end{frame}
+
+
+\end{document}
