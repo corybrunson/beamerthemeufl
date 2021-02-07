@@ -51,91 +51,45 @@ Block titles are rendered in {\cantarelleb Cantarell extra bold}, and two shortc
 \end{frame}
 
 
-\begin{frame}[fragile]{Palette colors}
+\begin{frame}{Frame element colors: text blocks}
 
-The palette colors used by outer themes interpolate between UF blue (main) or UF orange (sidebar) and white:
+The default title, symbol, and text colors derive from the UF Bright Color Palette.
 
-\vfill
+\begin{remark}
+Block and caption titles are rendered in UF blue and Cantarell extra bold.
+Other UF colors are used for alert (orange) and example (green) blocks.
+\end{remark}
 
-\begin{columns}
-\begin{column}{.5\textwidth}
+\begin{example}
+Example block titles are rendered in UF green.
+\end{example}
 
-\centering
-\verb|palette|
-\vspace{1ex}
-
-\begin{beamercolorbox}[sep=4pt,center]{palette primary}
-\usebeamerfont{palette primary}primary
-\end{beamercolorbox}
-
-\begin{beamercolorbox}[sep=4pt,center]{palette secondary}
-\usebeamerfont{palette secondary}secondary
-\end{beamercolorbox}
-
-\begin{beamercolorbox}[sep=4pt,center]{palette tertiary}
-\usebeamerfont{palette tertiary}tertiary
-\end{beamercolorbox}
-
-\begin{beamercolorbox}[sep=4pt,center]{palette quaternary}
-\usebeamerfont{palette quaternary}quaternary
-\end{beamercolorbox}
-
-\end{column}
-\begin{column}{.5\textwidth}
-
-\centering
-\verb|palette sidebar|
-\vspace{1ex}
-
-\begin{beamercolorbox}[sep=4pt,center]{palette sidebar primary}
-\usebeamerfont{palette sidebar primary}primary
-\end{beamercolorbox}
-
-\begin{beamercolorbox}[sep=4pt,center]{palette sidebar secondary}
-\usebeamerfont{palette sidebar secondary}secondary
-\end{beamercolorbox}
-
-\begin{beamercolorbox}[sep=4pt,center]{palette sidebar tertiary}
-\usebeamerfont{palette sidebar tertiary}tertiary
-\end{beamercolorbox}
-
-\begin{beamercolorbox}[sep=4pt,center]{palette sidebar quaternary}
-\usebeamerfont{palette sidebar quaternary}quaternary
-\end{beamercolorbox}
-
-\end{column}
-\end{columns}
-
-\vspace{2ex}
-For example, \verb|palette secondary| is defined using
-\begin{verbatim}
-bg=ufl blue!80!white,fg=white
-\end{verbatim}
+\begin{alertblock}{Alert block}
+Alerted block titles are rendered in UF red, which is somewhat close to UF orange.
+\end{alertblock}
 
 \end{frame}
 
 
-\begin{frame}{Frame element colors}
+\begin{frame}{Frame element colors: symbols and text}
 
-The symbol colors for itemized and enumerated lists derive from the UF Bright Color Palette and progress
+{\ttfamily local structure} elements like itemization symbols progress
 \begin{itemize}
-\item from green,
+\item from UF blue,
 \begin{itemize}
-\item through violet,
+\item through green,
 \begin{itemize}
-\item to red.
+\item to purple.
 \end{itemize}
 \end{itemize}
 \end{itemize}
-\alert{Alerted text is rendered in yellow.}
 
-\vfill\begin{remark}
-Block and caption titles are rendered in UF orange and Cantarell extra bold.
-\end{remark}
+\alert{Alerted text, like alerted block titles, is rendered in red.}
 
 \vfill
 Hyperlinks and buttons are rendered in muted UF blue.
 See \hyperlink{sec:customization}{Customization} and \hyperlink{slide:acknowledgments}{Acknowledgments} for examples.
+(The muted color palette also has muted UF orange.)
 
 \end{frame}
 
