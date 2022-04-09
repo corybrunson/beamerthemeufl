@@ -1,0 +1,324 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+  aspectratio=169,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usetheme[]{ufl}
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Beamer themes for the University of Florida},
+  pdfauthor={Jason Cory Brunson},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% formatting environments
+\newcommand{\columnsbegin}{\begin{columns}}
+\newcommand{\columnsend}{\end{columns}}
+
+% general text block environments
+\newcommand{\blockbegin}[1]{\begin{block}{#1}}
+\newcommand{\blockend}{\end{block}}
+\newcommand{\alertblockbegin}[1]{\begin{alertblock}{#1}}
+\newcommand{\alertblockend}{\end{alertblock}}
+
+% mathematical environments
+\newcommand{\definitionbegin}[1]{\begin{definition}{#1}}
+\newcommand{\definitionend}{\end{definition}}
+\newcommand{\examplebegin}[1]{\begin{example}{#1}}
+\newcommand{\exampleend}{\end{example}}
+\newcommand{\theorembegin}[1]{\begin{theorem}{#1}}
+\newcommand{\theoremend}{\end{theorem}}
+\newcommand{\proofbegin}[1]{\begin{proof}{#1}}
+\newcommand{\proofend}{\end{proof}}
+\newcommand{\lemmabegin}[1]{\begin{lemma}{#1}}
+\newcommand{\lemmaend}{\end{lemma}}
+\newcommand{\corollarybegin}[1]{\begin{corollary}{#1}}
+\newcommand{\corollaryend}{\end{corollary}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Beamer themes for the University of Florida}
+\author{Jason Cory Brunson}
+\date{\today}
+\institute{Laboratory for Systems Medicine, University of Florida}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}[allowframebreaks]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+\begin{frame}[fragile]{Markdown + Pandoc}
+\protect\hypertarget{markdown-pandoc}{}
+The \texttt{ufl} \textbf{Beamer theme} will be described in more detail
+in \texttt{ufl-theme-example.pdf}, generated from
+\texttt{ufl-theme-example.tex} using all four themes. (Currently, only
+the color and font themes are drafted.) This slideshow is generated
+instead from the \textbf{Markdown} file \texttt{ufl-theme-markdown.md}
+using the document conversion program
+\href{https://pandoc.org/}{\textbf{Pandoc}}.
+
+Note that Markdown syntax is not standardized, so much so that i decided
+not to link to any specific introduction or guide in the previous
+paragraph. Features may differ between the \textbf{Pandoc Beamer}
+converter and other engines, so beware that the syntax used here will
+not necessarily work in, say, GitHub.
+\end{frame}
+
+\hypertarget{pandoc-beamer}{%
+\section{Pandoc Beamer}\label{pandoc-beamer}}
+
+\begin{frame}[fragile]{Markdown to \LaTeX~in Pandoc}
+\protect\hypertarget{markdown-to-in-pandoc}{}
+Render this document directly into a PDF using Pandoc from the command
+line:
+
+\begin{verbatim}
+pandoc ufl-theme-markdown.md \
+  -t beamer \
+  --include-in-header=environment-shortcuts.tex \
+  --toc \
+  -o ufl-theme-markdown.pdf
+\end{verbatim}
+
+Change the output format to \TeX~by substituting the final option:
+
+\begin{verbatim}
+  -o ufl-theme-markdown.tex \
+  -s
+\end{verbatim}
+
+(This will produce an intermediary standalone \textbf{\LaTeX~source
+file}.)
+\end{frame}
+
+\begin{frame}[fragile]{Metadata}
+\protect\hypertarget{metadata}{}
+The \textbf{\href{https://yaml.org/}{YAML} front matter} at the top of
+\texttt{ufl-theme-markdown.md} contains several metadata, including the
+title, author, institution, and date. This document also sets the
+following variables:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{aspectratio}\KeywordTok{:}\AttributeTok{ }\DecValTok{169}
+\FunctionTok{section{-}titles}\KeywordTok{:}\AttributeTok{ }\CharTok{false}
+\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ ufl}
+\end{Highlighting}
+\end{Shaded}
+
+The \texttt{theme} variable calls the \texttt{ufl} Beamer theme. The
+\texttt{themeoptions} variable receives options that are passed to the
+theme.
+
+Find a list of Beamer-specific variables that can be set in the front
+matter at the Pandoc User's Guide:
+
+\begin{verbatim}
+https://pandoc.org/MANUAL.html#variables-for-beamer-slides
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Environment shortcuts}
+\protect\hypertarget{environment-shortcuts}{}
+The Pandoc command above included one atypical option:
+
+\begin{verbatim}
+  --include-in-header=environment-shortcuts.tex
+\end{verbatim}
+
+This adds the contents of \texttt{environment-shortcuts.tex} to the
+\LaTeX~preamble when rendering. The file contains several definitions
+like this:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\textbackslash{}newcommand}\NormalTok{\{}\ExtensionTok{\textbackslash{}blockbegin}\NormalTok{\}[1]\{}\KeywordTok{\textbackslash{}begin}\NormalTok{\{}\ExtensionTok{block}\NormalTok{\}\{\#1\}\}}
+\FunctionTok{\textbackslash{}newcommand}\NormalTok{\{}\ExtensionTok{\textbackslash{}blockend}\NormalTok{\}\{}\KeywordTok{\textbackslash{}end}\NormalTok{\{}\ExtensionTok{block}\NormalTok{\}\}}
+\end{Highlighting}
+\end{Shaded}
+
+These allow to use \LaTeX~environments without the use of
+\texttt{\textbackslash{}begin\{\}} and \texttt{\textbackslash{}end\{\}},
+thereby enabling Pandoc to render Markdown syntax within these
+environments.
+\end{frame}
+
+\hypertarget{formatting-text}{%
+\section{Formatting text}\label{formatting-text}}
+
+\begin{frame}[fragile]{Blocks}
+\protect\hypertarget{blocks}{}
+\blockbegin{Text Block}
+
+This text block is rendered using \verb|\blockbegin{Block Title}| and
+\verb|\blockend|. Since Pandoc interprets single carriage returns as
+spaces, two are required to separate these commands from the text they
+contain.
+
+Block titles are rendered in \primarytype{Cantarell extra bold}, a free
+alternative to the Gothic bold used for campus, college, and school
+woodmarks.
+
+\blockend
+
+\theorembegin
+
+Likewise, a theorem can include \textbf{bold}, \emph{emphatic}, and
+\texttt{fixed-width} font rendered from Markdown syntax. Note that
+\verb|\emph{}| is required for emphatic text when \emph{italics} are
+ignored in a theorem block, and notice the difference between
+\texttt{fixed-width} and \verb|inline verbatim code|, which can still be
+rendered using \verb|\verb|.
+
+\theoremend
+\end{frame}
+
+\begin{frame}[fragile]{Lists}
+\protect\hypertarget{lists}{}
+Enumerated, itemized, and nested lists can be intuitively typed:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\SpecialStringTok{1. }\NormalTok{This is a first item.}
+\SpecialStringTok{2. }\NormalTok{This is a second, but it has}
+\SpecialStringTok{    {-} }\NormalTok{not one,}
+\SpecialStringTok{    {-} }\NormalTok{not two, but}
+\SpecialStringTok{    {-} }\NormalTok{three sub{-}items.}
+\end{Highlighting}
+\end{Shaded}
+
+The code above renders as follows:
+
+\begin{enumerate}
+\tightlist
+\item
+  This is a first item.
+\item
+  This is a second, but it has
+
+  \begin{itemize}
+  \tightlist
+  \item
+    not one,
+  \item
+    not two, but
+  \item
+    three sub-items.
+  \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{Code blocks}
+\protect\hypertarget{code-blocks}{}
+The code blocks on the preceding slides use either 4-space indentation
+(for command line code) or triple--back ticks with syntax highlighting
+specific to the language on display (\texttt{yaml}, \texttt{tex}, and
+\texttt{markdown}).
+
+These and many other shorthands are documented in the
+\href{https://pandoc.org/MANUAL.html}{Pandoc User's Guide}.
+\end{frame}
+
+\hypertarget{thanks}{%
+\section{Thanks}\label{thanks}}
+
+\begin{frame}{Acknowledgments}
+\protect\hypertarget{acknowledgments}{}
+Since i didn't recognize them in previous documents, i'll thank here the
+designers of \TeX~and \LaTeX, as well as those of Markdown and Pandoc,
+for making this exceedingly easy, while necessarily limited, plain
+text--to--PDF workflow possible.
+
+As in the other example documents, suggestions are very welcome! Email
+Cory
+(\href{mailto:jason.brunson@medicine.ufl.edu}{\nolinkurl{jason.brunson@medicine.ufl.edu}}),
+raise an issue, or submit a pull request (on a new branch).
+\end{frame}
+
+\end{document}

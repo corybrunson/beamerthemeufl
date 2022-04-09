@@ -14,9 +14,9 @@ theme: ufl
 
 ## Markdown + Pandoc
 
-The `ufl` Beamer theme will be described in more detail in `ufl-theme-example.pdf`, generated from `ufl-theme-example.tex` using all four themes. (Currently, only the color and font themes are drafted.) This slideshow is generated instead from the Markdown file `ufl-theme-markdown.md` using the document conversion program [Pandoc](https://pandoc.org/).
+The `ufl` **Beamer theme** will be described in more detail in `ufl-theme-example.pdf`, generated from `ufl-theme-example.tex` using all four themes. (Currently, only the color and font themes are drafted.) This slideshow is generated instead from the **Markdown** file `ufl-theme-markdown.md` using the document conversion program [**Pandoc**](https://pandoc.org/).
 
-Note that Markdown syntax is not standardized, so much so that i decided not to link to any specific introduction or guide in the previous paragraph. Features may differ between the Pandoc Beamer converter and other engines, so beware that the syntax used here will not necessarily work in, say, GitHub.
+Note that Markdown syntax is not standardized, so much so that i decided not to link to any specific introduction or guide in the previous paragraph. Features may differ between the **Pandoc Beamer** converter and other engines, so beware that the syntax used here will not necessarily work in, say, GitHub.
 
 # Pandoc Beamer
 
@@ -32,14 +32,14 @@ Render this document directly into a PDF using Pandoc from the command line:
 
 Change the output format to \TeX\ by substituting the final option:
 
-      -o ufl-theme-markdown.tex
+      -o ufl-theme-markdown.tex \
       -s
 
-(This will produce an intermediary standalone \LaTeX\ document.)
+(This will produce an intermediary standalone **\LaTeX\ source file**.)
 
 ## Metadata
 
-The [YAML](https://yaml.org/) front matter at the top of `ufl-theme-markdown.md` contains several metadata, including the title, author, institution, and date. This document also sets the following variables:
+The **[YAML](https://yaml.org/) front matter** at the top of `ufl-theme-markdown.md` contains several metadata, including the title, author, institution, and date. This document also sets the following variables:
 
 ```yaml
 aspectratio: 169
@@ -49,7 +49,9 @@ theme: ufl
 
 The `theme` variable calls the `ufl` Beamer theme. The `themeoptions` variable receives options that are passed to the theme.
 
-Find [a list of Beamer-specific variables](https://pandoc.org/MANUAL.html#variables-for-beamer-slides) that can be set in the front matter at the Pandoc User's Guide.
+Find a list of Beamer-specific variables that can be set in the front matter at the Pandoc User's Guide:
+
+    https://pandoc.org/MANUAL.html#variables-for-beamer-slides
 
 ## Environment shortcuts
 
